@@ -1,5 +1,6 @@
 -- Global
 -- vim.opt.fillchars = { vert = ' ' }
+vim.g.mapleader = ","
 vim.opt.showtabline = 2
 vim.opt.mouse = 'a'
 vim.opt.backupcopy = 'yes'

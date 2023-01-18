@@ -20,6 +20,8 @@ vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', {noremap = false, silent = fal
 -- Easy-align
 vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)', {noremap = false, silent = false})
 vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)', {noremap = false, silent = false})
+-- Formatter
+vim.keymap.set('n', '<leader>F', ':FormatWrite<CR>', {noremap = true, silent = false})
 -- Lightspeed
 vim.keymap.set('n', 's', '<Plug>Lightspeed_omni_s', {noremap = false, silent = false})
 vim.keymap.set('n', 'f', '<Plug>Lightspeed_f', {noremap = false, silent = false})
@@ -48,7 +50,8 @@ vim.keymap.set('n', '<leader>bb', ":lua require('telescope.builtin').buffers()<C
 vim.keymap.set('n', '<leader>t', ":lua require('telescope.builtin').treesitter()<CR>", {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>l', ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>f', ":lua require('plugins.telescope').project_files()<CR>", {noremap = true, silent = true})
-vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.repo.list{file_ignore_patterns={'/%.cache/', '/%.cargo/', '/%.local/', '/%.asdf/', '/%.zinit/', '/%.tmux/'}}<CR>", {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>p', ":lua require('plugins.telescope').project_files()<CR>", {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>P', ":lua require'telescope'.extensions.repo.list{file_ignore_patterns={'/%.cache/', '/%.cargo/', '/%.local/', '/%.asdf/', '/%.zinit/', '/%.tmux/'}}<CR>", {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>c', ":lua require('plugins.telescope').my_git_commits()<CR>", {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>g', ":lua require('plugins.telescope').my_git_status()<CR>", {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>b', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {noremap = true, silent = true})
